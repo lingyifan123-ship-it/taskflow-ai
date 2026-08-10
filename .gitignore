@@ -1,0 +1,15 @@
+﻿# backup files
+*_backup.json
+
+# java build
+target/
+.m2/
+
+# ide
+.idea/
+*.iml
+.vscode/
+
+# os
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,7 @@
+services:
+  taskflow-ai:
+    build: .
+    ports: ["8081:8081"]
+    environment:
+      AI_API_KEY: ${AI_API_KEY:-}
+      TASKFLOW_BASE_URL: ${TASKFLOW_BASE_URL:-http://host.docker.internal:8080}

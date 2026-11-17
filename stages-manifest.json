@@ -1,0 +1,330 @@
+{
+    "stages":  [
+                   {
+                       "stage":  1,
+                       "date":  "2026-08-10T17:41:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "AI小服务先建起来，依赖有点多",
+                       "student_note":  "Spring AI 版本看得头大，先保证项目不报红。",
+                       "files":  [
+                                     "pom.xml",
+                                     ".gitignore",
+                                     "src/main/java/com/lingyifan/taskflowai/TaskFlowAiApplication.java"
+                                 ]
+                   },
+                   {
+                       "stage":  2,
+                       "date":  "2026-08-11T01:04:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "先定义任务计划，再调模型试试",
+                       "student_note":  "模型先返回啥我就打印啥，结构化输出后面慢慢调。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/TaskPlan.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  3,
+                       "date":  "2026-08-11T14:46:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复ModelGateway、TaskPlan的小bug，模型返回格式继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/TaskPlan.java"
+                                 ]
+                   },
+                   {
+                       "stage":  4,
+                       "date":  "2026-08-12T15:51:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下ModelGateway、TaskPlan的逻辑，模型返回格式先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/TaskPlan.java"
+                                 ]
+                   },
+                   {
+                       "stage":  5,
+                       "date":  "2026-08-12T22:22:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下ModelGateway、TaskPlan，模型返回格式这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/TaskPlan.java"
+                                 ]
+                   },
+                   {
+                       "stage":  6,
+                       "date":  "2026-08-13T17:08:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "分析接口能调了，service先用map存结果",
+                       "student_note":  "不想一开始就接数据库，先用内存 Map 把流程走通。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  7,
+                       "date":  "2026-08-14T00:37:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整AiController、ModelGateway，顺手把需求分析接口的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  8,
+                       "date":  "2026-08-14T14:01:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版PlanService、AiController、ModelGateway，需求分析接口总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  9,
+                       "date":  "2026-08-15T16:06:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复PlanService、AiController的小bug，需求分析接口继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  10,
+                       "date":  "2026-08-15T22:12:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下ModelGateway、PlanService的逻辑，需求分析接口先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  11,
+                       "date":  "2026-08-15T16:06:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下AiController、ModelGateway，需求分析接口这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  12,
+                       "date":  "2026-08-15T22:12:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "配置deepseek地址，没key就走假的",
+                       "student_note":  "怕别人没 Key 跑不了，所以先写了一个很笨的 Mock。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  13,
+                       "date":  "2026-08-16T14:50:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整application、PlanService，顺手把重试和确认流程的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  14,
+                       "date":  "2026-08-16T21:10:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版ModelGateway、AiController，重试和确认流程总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  15,
+                       "date":  "2026-08-16T14:50:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复application、PlanService的小bug，重试和确认流程继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "src/main/resources/application.yml",
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java"
+                                 ]
+                   },
+                   {
+                       "stage":  16,
+                       "date":  "2026-08-17T17:28:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下ModelGateway、AiController、README的逻辑，重试和确认流程先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  17,
+                       "date":  "2026-08-18T17:18:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下README、application，重试和确认流程这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "README.md",
+                                     "src/main/resources/application.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  18,
+                       "date":  "2026-08-19T14:18:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "补了点ModelGateway、AiController的判断，重试和确认流程没那么容易啊",
+                       "student_note":  "上次的原文件只能跑通一半，今天补逻辑补到有点晕。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  19,
+                       "date":  "2026-08-19T19:20:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整README、application，顺手把重试和确认流程的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "README.md",
+                                     "src/main/resources/application.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  20,
+                       "date":  "2026-08-20T14:14:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "又改了一版PlanService、ModelGateway、AiController，重试和确认流程总算正常点了",
+                       "student_note":  "回头检查原文件发现漏了边界情况，只好再补一轮。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java",
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java"
+                                 ]
+                   },
+                   {
+                       "stage":  21,
+                       "date":  "2026-08-20T20:24:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复README、application的小bug，重试和确认流程继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "README.md",
+                                     "src/main/resources/application.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  22,
+                       "date":  "2026-08-21T16:13:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "改了下PlanService、ModelGateway的逻辑，重试和确认流程先能跑再说",
+                       "student_note":  "发现上次写的原文件还有问题，这次加了点判断再用 println 看结果。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/PlanService.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  23,
+                       "date":  "2026-08-22T00:13:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下AiController、README，重试和确认流程这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/AiController.java",
+                                     "README.md"
+                                 ]
+                   },
+                   {
+                       "stage":  24,
+                       "date":  "2026-08-22T16:04:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "错误返回收一下，模型测试也补了",
+                       "student_note":  "模型输出老是不稳定，只能到后面补异常和固定样例测试。",
+                       "files":  [
+                                     "src/main/java/com/lingyifan/taskflowai/ApiErrors.java",
+                                     "src/test/java/com/lingyifan/taskflowai/ModelGatewayTests.java"
+                                 ]
+                   },
+                   {
+                       "stage":  25,
+                       "date":  "2026-08-22T20:08:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "调整ModelGatewayTests、ModelGateway，顺手把异常和模型测试的坑填了",
+                       "student_note":  "继续修改原文件，先把眼前这个 bug 解决，优化以后再说。",
+                       "files":  [
+                                     "src/test/java/com/lingyifan/taskflowai/ModelGatewayTests.java",
+                                     "src/main/java/com/lingyifan/taskflowai/ModelGateway.java"
+                                 ]
+                   },
+                   {
+                       "stage":  26,
+                       "date":  "2026-08-22T16:04:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "把ai测试结果记下来，省得又忘",
+                       "student_note":  "跑了几组样例后手动整理结果，先留证据以后再自动化。",
+                       "files":  [
+                                     "reports/ai-test-report.md",
+                                     "NOTES.md"
+                                 ]
+                   },
+                   {
+                       "stage":  27,
+                       "date":  "2026-08-22T20:08:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修复ai-test-report、NOTES的小bug，测试记录继续往下写",
+                       "student_note":  "在原文件上边测边改，控制台输出留着方便我找问题。",
+                       "files":  [
+                                     "reports/ai-test-report.md",
+                                     "NOTES.md"
+                                 ]
+                   },
+                   {
+                       "stage":  28,
+                       "date":  "2026-08-23T15:14:00+08:00",
+                       "change_type":  "add",
+                       "commit_message":  "AI服务也塞进docker里试试",
+                       "student_note":  "容器里连主服务地址不一样，查网络查了好久。",
+                       "files":  [
+                                     "Dockerfile",
+                                     "docker-compose.yml"
+                                 ]
+                   },
+                   {
+                       "stage":  29,
+                       "date":  "2026-08-23T22:25:00+08:00",
+                       "change_type":  "modify",
+                       "commit_message":  "修一下README、Dockerfile，容器联调这里卡了半天",
+                       "student_note":  "是在原文件上继续改的，跑起来才发现自己想简单了。",
+                       "files":  [
+                                     "README.md",
+                                     "Dockerfile"
+                                 ]
+                   }
+               ],
+    "base_branch":  null,
+    "strategy":  null,
+    "repository":  "taskflow-ai"
+}
